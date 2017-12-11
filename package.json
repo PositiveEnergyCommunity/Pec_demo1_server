@@ -1,0 +1,27 @@
+{
+  "name": "pec_demo_backend_server",
+  "version": "1.0.0",
+  "description": "backend server of the pec demonstrator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"No test specified yet\" && exit 1"
+  },
+  "author": "Dan DUONG",
+  "license": "SEE LICENSE IN app.js",
+  "engines": {
+    "node": "6.11.15",
+    "npm": "3.10.10"
+  },
+  "private": true,
+  "dependencies": {
+    "bcrypt": "1.0.3",
+    "body-parser": "1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "4.16.2",
+    "jsonwebtoken": "8.1.0",
+    "lodash": "^4.17.4",
+    "mongodb": "2.2.33",
+    "mongoose": "4.13.5",
+    "morgan": "1.9.0"
+  }
+}
