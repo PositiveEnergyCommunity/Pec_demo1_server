@@ -12,55 +12,19 @@ var ObjectId = require('mongoose').Types.ObjectId;
 
 
 var UserSchema = new mongoose.Schema({
-	id: {
-		type: String,
-		unique: false,						// to be changed later....
-		required: false,
-		trim: true
-	},
-	title: {
-		type: String,
-		unique: false,
-		required: false,
-		trim: true
-	},
-	firstname: {
-		type: String,
-		unique: false,
-		required: false,
-		trim: true
-	},
-	lastname: {
-		type: String,
-		unique: false,
-		required: false,
-		trim: true
-	},
-	email: {
-		type: String,
-		unique: true,
-		required: true,
-		trim: true
-	},
-	password: {
-		type: String,
-		required: true,
-	},
-	phone: {
-		type: String,
-		unique: false,
-		required: false,
-		trim: true
-	},
-	userStatus: {
-		type: String,
-		unique: false,
-		required: false,
-		trim: true
-	},
+	id: { type: String, unique: false, required: false, trim: true	},
+	title: 		{ type: String, trim: true },
+	firstname: 	{ type: String, trim: true },
+	lastname: 	{ type: String, trim: true },
+	email: 		{ type: String, required: true, trim: true },
+	password: 	{ type: String, required: true, trim: true },
+	phone: 		{ type: String, trim: true },
+	userstatus: { type: String, trim: true },
+	company_Id:	{ type: mongoose.Schema.Types.ObjectId },
+	portfolio_Id:	{ type: mongoose.Schema.Types.ObjectId },
+	profile: 	{ type: String, trim: true },
 	token: String
 });
-
 
 
 //authenticate input against database
