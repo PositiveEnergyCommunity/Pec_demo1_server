@@ -125,7 +125,7 @@ exports.createUser = function (data, callback) {
 				console.log("[createUser] Company - err.message = " + err.message);
 				var error = new Error(err.message);
 				error.status = 409;
-				return next(error)
+				callback(error, null);
 			} 
 			else {
 				console.log("[createUser] createCompany Success !!!");
@@ -169,7 +169,7 @@ exports.createUser = function (data, callback) {
 										console.log("[createUser] Portfolio - err.message = " + err.message);
 										var error = new Error(err.message);
 										error.status = 409;
-										return next(error)
+										callback(error, null);
 									} 
 									else {
 										console.log("[createUser] create Portfolio Success !!!");
