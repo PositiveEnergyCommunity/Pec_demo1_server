@@ -133,7 +133,7 @@ exports.createUser = function (data, callback) {
 
 				userData = {
 					id: userId + 1,
-					title: data.title,
+					prefix: data.title,
 					firstname: data.firstname,
 					lastname: data.lastname,
 					email: data.email, 
@@ -141,8 +141,10 @@ exports.createUser = function (data, callback) {
 					phone: data.phone,
 					userStatus: data.userStatus,
 					company_Id: companyDataResp._id,
+					title: data.title,
 					portfolio_Id: null,
-					profile: data.profile
+					profile: data.profile,
+					description: data.description
 				}
 				
 				console.log("[createUser]- " + userData.firstname + " " + userData.lastname);

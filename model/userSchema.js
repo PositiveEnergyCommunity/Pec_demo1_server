@@ -13,7 +13,7 @@ var ObjectId = require('mongoose').Types.ObjectId;
 
 var UserSchema = new mongoose.Schema({
 	id: { type: String, unique: false, required: false, trim: true	},
-	title: 		{ type: String, trim: true },
+	prefix: 		{ type: String, trim: true },
 	firstname: 	{ type: String, trim: true },
 	lastname: 	{ type: String, trim: true },
 	email: 		{ type: String, required: true, trim: true },
@@ -21,8 +21,10 @@ var UserSchema = new mongoose.Schema({
 	phone: 		{ type: String, trim: true },
 	userstatus: { type: String, trim: true },
 	company_Id:	{ type: mongoose.Schema.Types.ObjectId },
+	title:		{ type: String, trim: true },
 	portfolio_Id:	{ type: mongoose.Schema.Types.ObjectId },
 	profile: 	{ type: String, trim: true },
+	description:{ type: String, trim: true },
 	token: String
 });
 
